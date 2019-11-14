@@ -1,25 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Comentarios from './componentes/comentario/Comentarios';
+import Previsao from './componentes/previsao/Previsao';
+import Contador from './componentes/contador/Contador';
+import cat1 from '/img/cat1.jpg';
+import cat2 from '/img/cat2.jpg';
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className="container">
+     <Previsao
+        data="01/06/2019"
+        resumo="Nublado"
+        // img={}
+        temperatura={{
+          max: 25,
+          min: 18,
+        }}
+      />
+        
+     <Contador/>
+     <Comentarios/>
+    </div>   
+
   );
 }
 
